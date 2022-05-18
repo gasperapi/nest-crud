@@ -6,15 +6,15 @@ export class User {
     id: number;
 
     @Column()
-    firstName: string;
-  
+    fullName: string;
+    
+    @Column() //Fk -> flight
+    flight_id: string;
+    
     @Column()
-    lastName: string;
-
-  
-    @Column({ default: true })
-    isActive: boolean;
+    ticket_type: string;
     
-    
+    @Column()
+    ticket_date:Date;
     
 }
